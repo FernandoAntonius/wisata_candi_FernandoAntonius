@@ -22,10 +22,46 @@ class DetailScreen extends StatelessWidget {
                     candi.imageAsset,
                     width: double.infinity,
                     height: 300,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 32,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple[100]?.withValues(), // temp
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.arrow_back),
                   ),
                 ),
               ),
             ],
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              children: [
+                // info atas nama candi dan tombol favorit
+                Row(
+                  children: [
+                    Text(candi.name),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.favorite_border),
+                    ),
+                  ],
+                ),
+                // info tengah lokasi dibangun tipe
+                // info bawah deskripsi
+              ],
+            ),
           ),
         ],
       ),
