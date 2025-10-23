@@ -53,8 +53,15 @@ class DetailScreen extends StatelessWidget {
                 children: [
                   // info atas nama candi dan tombol favorit
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(candi.name),
+                      Text(
+                        candi.name,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       IconButton(
                         onPressed: () {},
                         icon: Icon(Icons.favorite_border),
